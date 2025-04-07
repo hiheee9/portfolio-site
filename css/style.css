@@ -1,0 +1,530 @@
+.wrap {
+  width: 100%;
+  background-color: #fff;
+  margin: 0 auto;
+}
+
+/* header */
+.header {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  margin: 0 auto;
+  display: flex;
+  border-bottom: 3px solid #000;
+}
+.logo {
+  width: 20%;
+  font-family: "Notable", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 3rem;
+}
+.logo > a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.6vw;
+  letter-spacing: 0.9rem;
+  text-align: center;
+  /* position: relative;
+  top: -3%; */
+}
+.menu {
+  position: relative;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  /* align-items: center; */
+}
+.navi {
+  display: flex;
+  width: 35%;
+  height: 100%;
+  /* gap: 6.5rem; */
+  margin-right: 4rem;
+  justify-content: space-between;
+  align-items: center; /* 세로로 중앙 정렬 */
+}
+
+.navi li {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center; /* li 내에서 세로로 중앙 정렬 */
+}
+
+.navi li a {
+  display: flex;
+  justify-content: center; /* 가로로 중앙 정렬 */
+  align-items: center; /* 세로로 중앙 정렬 */
+  height: 100%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  line-height: 1;
+}
+.navi li a span {
+}
+.navi li a i {
+  font-size: 2.2rem;
+}
+
+/* main */
+
+.main {
+  position: relative;
+  width: 100%;
+  min-height: 60%; /* 최소 높이는 60%로, 그 이상은 콘텐츠에 따라 자동으로 늘어남 */
+  /* background-color: #e2e2e2; */
+}
+.top-visual {
+  border-bottom: 3px solid #000;
+  background-color: #fff;
+  padding: 3rem 0 4rem 0;
+}
+.mainvideo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mainvideo video {
+  width: 70%;
+  height: auto;
+}
+
+/* contents */
+.top-work {
+  position: relative;
+  /* width: 100%; */
+  margin: 0 10rem;
+}
+.work-title {
+  margin-bottom: 3em;
+}
+.work-title span {
+  /* font-family: "HakgyoansimPuzzleTTF-Outline"; */
+  /* font-family: "MoiraiOne-Regular"; */
+  /* font-weight: 100; */
+  font-size: 5em;
+  font-family: "Bungee Outline", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+.work-nav {
+  border-bottom: 3px solid #000;
+  padding: 1.5rem 0;
+  margin-bottom: 3rem;
+}
+.work-nav ul {
+  display: flex;
+  gap: 4rem;
+}
+.work-nav li {
+}
+.work-nav li a {
+  position: relative;
+  font-size: 1.9rem;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+  color: #888;
+  line-height: 1;
+}
+.work-nav li a::before {
+  content: "";
+  z-index: 0;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: -0.5rem;
+  scale: 0 1;
+  transition: scale 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  background: #000;
+}
+.work-nav li:hover a::before {
+  scale: 1 1.1;
+  color: #000;
+  height: 2px;
+}
+.work-nav li:hover a {
+  color: #000;
+}
+
+.work-nav li.on a {
+  color: #000;
+  /* font-size: 2rem; */
+}
+
+/* contents thumbnail text*/
+.work-list {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 3rem;
+  margin-left: 1.5rem;
+}
+.work-list article {
+  position: relative;
+  width: 384px;
+  margin-bottom: 50px;
+  padding: 3rem;
+}
+.work-list article a {
+}
+.thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+  border: 1px solid #000;
+  border-radius: 3%;
+}
+.title-text {
+  margin-top: 1.3rem;
+  margin-left: 1rem;
+  font-size: 1.4rem;
+}
+.title-text text {
+}
+.title-text span {
+}
+.work-list article a p {
+  font-size: 1.4rem;
+  margin-left: 1rem;
+  margin-top: 0.8rem;
+}
+
+/* contents video */
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.video-container .video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.link-btn {
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10rem;
+}
+.link-btn a {
+  position: relative;
+  width: 14rem;
+  height: 3rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.link-btn a span {
+  font-size: 1.5rem;
+  line-height: 2;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+}
+svg {
+  width: 2.3rem;
+  height: 1.8rem;
+  display: flex;
+}
+.line {
+  position: absolute;
+  width: 13rem;
+  height: 0.2rem;
+  top: 3rem;
+}
+.link-btn a:hover .line {
+  width: 14rem;
+  background-color: #000;
+}
+.link-btn a:hover span {
+  font-size: 1.7rem;
+}
+.link-btn a:hover svg {
+  width: 2.5rem;
+  height: 2rem;
+}
+
+/* profile section */
+.top-profile {
+  position: relative;
+  padding: 10rem;
+}
+.profile-box {
+  clip-path: inset(0px 0% round 20px);
+  background-color: rgb(230, 230, 230);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  contain: layout paint style;
+  padding: 20rem 0;
+}
+.profile-card {
+  contain: layout style;
+  aspect-ratio: 17/10;
+  width: 47%;
+  width: 51%;
+  min-width: 65rem;
+  height: auto;
+}
+.profile-fowrad,
+.profile-back {
+  border: #000 solid 0.4rem;
+  border-radius: 2rem;
+  overflow: hidden;
+  contain: layout paint style;
+  backface-visibility: hidden;
+  background: #fff;
+  animation: card-move 3s ease-in-out infinite alternate;
+  cursor: pointer;
+}
+
+.profile-fowrad {
+  display: grid;
+  contain: layout paint style;
+  position: absolute;
+  top: 0;
+  left: 0;
+  grid-template-columns: 39% 1fr;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 5em 0 6em;
+  gap: 3.9em;
+  letter-spacing: 0;
+}
+.profile-fowrad figure {
+  contain: layout paint style;
+  position: relative;
+  aspect-ratio: 1/1;
+  width: auto;
+  height: auto;
+  padding: 18%;
+  overflow: hidden;
+  border-radius: 100%;
+  pointer-events: none;
+  border: #000 solid 0.4rem;
+}
+.profile-fowrad figure img {
+  height: 100%;
+  -o-object-fit: cover;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.profile-text {
+  /* background-color: #888; */
+  height: 100%;
+}
+.profile-hd {
+  width: 100%;
+  font-size: 8rem;
+  letter-spacing: 1px;
+  line-height: 1;
+  font-family: "Cafe24Decoline";
+  font-weight: normal;
+  margin-bottom: 3rem;
+}
+.profile-card:hover .profile-fowrad .profile-text .profile-hd {
+  font-family: "Cafe24Decobox";
+  font-weight: normal;
+}
+
+.profile-name {
+  display: flex;
+  gap: 1.5rem;
+  line-height: 1;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+.profile-name .job {
+  font-size: 1.7rem;
+  font-family: "GmarketSansBold";
+  letter-spacing: 0.8px;
+  line-height: 1;
+}
+.profile-name .name {
+  font-size: 3.5rem;
+  font-family: "GmarketSansBold";
+  letter-spacing: 1px;
+  line-height: 1;
+}
+.profile-text p {
+  font-size: 1.5rem;
+  word-break: keep-all;
+  letter-spacing: 1px;
+  line-height: 2;
+  text-align: left;
+}
+.profile-btn {
+  margin-top: 3.5rem;
+}
+.btn {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 20px;
+}
+.profile-btn:hover .btn span {
+  font-size: 2.2rem;
+  font-family: "GmarketSansBold";
+  margin-bottom: 0.3rem;
+}
+
+.btn span {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 1px;
+}
+.arw {
+  width: 20px;
+  height: 20px;
+}
+.arw svg {
+}
+.line {
+  width: 95%;
+  height: 0.3rem;
+  bottom: 0;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  background-color: #eee;
+}
+.line,
+.line::after {
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+.line::after {
+  top: 0;
+  height: 100%;
+  border: 0.5rem;
+  background: #000;
+  content: "";
+  animation: line-move 5s cubic-bezier(0.85, 0, 0.15, 1) infinite;
+}
+
+@keyframes card-move {
+  0% {
+    translate: 0 -6%;
+  }
+  to {
+    translate: 0 6%;
+  }
+}
+
+@keyframes card-move-sp {
+  0% {
+    translate: 0 -4%;
+  }
+  to {
+    translate: 0 4%;
+  }
+}
+
+@keyframes line-move {
+  0% {
+    translate: -100% 0;
+  }
+  50% {
+    translate: 0 0;
+  }
+  100% {
+    translate: 100% 0;
+  }
+}
+
+.top-contact {
+  position: relative;
+}
+.contact-title {
+  display: flex;
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  align-items: center;
+  justify-content: center;
+}
+.contact-title span {
+  font-size: 5em;
+  font-family: "Bungee Outline", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+.contact-btn {
+  position: relative;
+  display: flex;
+  gap: 35rem;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  margin: 20rem 0;
+}
+.contact-btn a {
+}
+.contact-bg .logos:hover i {
+  font-size: 7.5rem;
+  color: #535353;
+}
+.contact-bg {
+}
+.contact-bg .logos {
+  font-size: 7rem;
+}
+.contact-bg .bg {
+}
+
+/* footer */
+
+.footer {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  background-color: #fff;
+}
+.footer .menu {
+  position: relative;
+  justify-content: flex-start;
+  margin-left: 7rem;
+}
+.footer .menu .navi {
+}
+
+.footer .button {
+  position: absolute;
+  top: 20%;
+  left: 95%;
+}
+.footer .button i {
+  font-size: 5rem;
+}
+
+.none {
+  display: none;
+}

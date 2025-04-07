@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Orbitron&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Prosto+One&family=Ribeye+Marrow&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Prosto+One&family=Ribeye+Marrow&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Notable&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Ribeye+Marrow&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@font-face {
+  font-family: "HakgyoansimPuzzleTTF-Outline";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2408-5@1.0/HakgyoansimPuzzleTTF-Outline.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSansLight";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSansBold";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cafe24Decoline";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2405-3@1.1/Cafe24Decoline.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cafe24Decobox";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2405-3@1.1/Cafe24Decobox.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  font-size: 10px;
+  line-height: 1.5;
+  color: #000;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  text-size-adjust: 100%;
+  letter-spacing: -0.23px;
+  /* font-family: "arial", sans-serif; */
+  /* font-family: "Roboto", sans-serif; */
+  font-family: "GmarketSansMedium", sans-serif;
+  word-break: break-all;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+}
+img {
+  vertical-align: middle;
+  border: 0;
+}
+
+/* 폰트 정보 */
+/*3  .ribeye-marrow-regular {
+  font-family: "Ribeye Marrow", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+  logo 써볼것 (안씀)
+
+<weight>: Use a value from 100 to 900
+<uniquifier>: Use a unique and descriptive class name
+
+4(기본서체헐랬는데 바꿨어요)
+.roboto {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+} 
+
+ 5.(로고) .notable-regular {
+  font-family: "Notable", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+이거 별로임londrina-outline-regular 
+
+6. d이건 굵기가 넘 별로라.... 먼가 안어울림
+.ribeye-marrow-regular {
+  font-family: "Ribeye Marrow", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+ 7. 오 일단 work 메뉴 이걸로 확정! 
+  .bungee-outline-regular {
+  font-family: "Bungee Outline", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+  8. 이거 .. efrra랑 비슷해서 넣어둠
+  // <weight>: Use a value from 300 to 800
+// <uniquifier>: Use a unique and descriptive class name
+
+.open-sans-<uniquifier> {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+
+HakgyoansimPuzzleTTF-Outline (지금 work 메뉴 글씨체로 사용)
+지마켓산스 기본서체..로 변경함(한글영어둘다된다)
+MoiraiOne-Regular 이거 괜찮아서 work메뉴 둘중 고민
+
+
+Cafe24Decoline / Cafe24Decobox
+이거 프로필 창으로 쓰기
+
+*/

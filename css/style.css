@@ -4,79 +4,6 @@
   margin: 0 auto;
 }
 
-/* header */
-.header {
-  position: relative;
-  width: 100%;
-  height: 100px;
-  margin: 0 auto;
-  display: flex;
-  border-bottom: 3px solid #000;
-}
-.logo {
-  width: 20%;
-  font-family: "Notable", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 3rem;
-}
-.logo > a {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2.6vw;
-  letter-spacing: 0.9rem;
-  text-align: center;
-  /* position: relative;
-  top: -3%; */
-}
-.menu {
-  position: relative;
-  width: 80%;
-  height: 100%;
-  display: flex;
-  justify-content: flex-end;
-  /* align-items: center; */
-}
-.navi {
-  display: flex;
-  width: 35%;
-  height: 100%;
-  /* gap: 6.5rem; */
-  margin-right: 4rem;
-  justify-content: space-between;
-  align-items: center; /* 세로로 중앙 정렬 */
-}
-
-.navi li {
-  position: relative;
-  height: 100%;
-  display: flex;
-  align-items: center; /* li 내에서 세로로 중앙 정렬 */
-}
-
-.navi li a {
-  display: flex;
-  justify-content: center; /* 가로로 중앙 정렬 */
-  align-items: center; /* 세로로 중앙 정렬 */
-  height: 100%;
-  font-size: 1.5rem;
-  font-weight: bold;
-  letter-spacing: 0.2rem;
-  line-height: 1;
-}
-.navi li a span {
-}
-.navi li a i {
-  font-size: 2.2rem;
-}
-
 /* main */
 
 .main {
@@ -107,7 +34,8 @@
   margin: 0 10rem;
 }
 .work-title {
-  margin-bottom: 3em;
+  margin-top: 110px;
+  margin-bottom: 3.5em;
 }
 .work-title span {
   /* font-family: "HakgyoansimPuzzleTTF-Outline"; */
@@ -175,11 +103,14 @@
 }
 .work-list article {
   position: relative;
+  display: inline-block;
+  overflow: hidden;
   width: 384px;
   margin-bottom: 50px;
   padding: 3rem;
 }
 .work-list article a {
+  position: relative;
 }
 .thumbnail {
   width: 100%;
@@ -188,6 +119,7 @@
   overflow: hidden;
   border: 1px solid #000;
   border-radius: 3%;
+  transition: transform 0.5s ease-in-out;
 }
 .title-text {
   margin-top: 1.3rem;
@@ -209,15 +141,31 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  display: none;
+  width: 324px;
+  height: 254px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: center;
 }
 .video-container .video {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
+/* hover시 썸네일 커지기 + 비디오 재생 */
+.work-list article:hover .thumbnail {
+  transform: scale(1.1);
+}
+.work-list article:hover a .video-container {
+  opacity: 1;
+  transform: scale(1.1);
+  pointer-events: auto;
+}
+
 .link-btn {
   height: 3rem;
   display: flex;
@@ -461,6 +409,8 @@ svg {
 
 .top-contact {
   position: relative;
+  border-top: 3px solid #000;
+  padding-top: 7rem;
 }
 .contact-title {
   display: flex;
@@ -484,7 +434,7 @@ svg {
   /* display: flex; */
   align-items: center;
   justify-content: center;
-  margin: 20rem 0;
+  padding: 18rem;
 }
 .contact-btn a {
 }
@@ -507,6 +457,7 @@ svg {
   width: 100%;
   height: 100px;
   background-color: #fff;
+  border-top: 3px solid #000;
 }
 .footer .menu {
   position: relative;
@@ -518,13 +469,44 @@ svg {
 
 .footer .button {
   position: absolute;
-  top: 20%;
-  left: 95%;
-}
-.footer .button i {
-  font-size: 5rem;
+  right: 0;
+  bottom: 0;
+  width: 8%;
+  height: 100%;
+  overflow: hidden;
+  border-left: 3px solid #000;
 }
 
+.footer .button i {
+  font-size: 5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000;
+  z-index: 1;
+}
+
+.footer .button::after {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: center bottom;
+  transform: translate(0, 100%); /* translate 구문 수정 */
+  background: #000;
+  content: "";
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1); /* transition 속성 수정 */
+}
+
+.footer .button:hover::after {
+  transform: translate(0, 0); /* translate 구문 수정 */
+}
+.footer .button:hover i {
+  color: #fff; /* 호버 시 아이콘 색상을 흰색으로 변경 */
+}
 .none {
   display: none;
 }

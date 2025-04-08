@@ -35,4 +35,12 @@ window.addEventListener("load", () => {
       e.currentTarget.classList.add("on");
     });
   });
+
+  // 클릭시 맨위로 스크롤 되기
+  document.querySelector(".button").addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
 });
